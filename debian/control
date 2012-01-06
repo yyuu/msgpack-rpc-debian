@@ -1,0 +1,47 @@
+Source: msgpack-rpc
+Priority: extra
+Maintainer: Yamashita Yuu <yamashita@geishatokyo.com>
+Build-Depends: debhelper (>= 8.0.0), autotools-dev,
+  autoconf,
+  automake,
+  libtool,
+  libc6,
+  libstdc++6,
+  libstdc++6-4.6-dev,
+  zlib1g,
+  zlib1g-dev,
+  libmsgpack3,
+  libmsgpack-dev,
+  libmpio0,
+  libmpio-dev,
+Standards-Version: 3.9.2
+Section: libs
+Homepage: http://msgpack.org/
+Vcs-Git: git://github.com/msgpack/msgpack-rpc.git
+Vcs-Browser: https://github.com/msgpack/msgpack-rpc
+
+Package: libmsgpack-rpc-dev
+Section: libdevel
+Architecture: any
+Depends: libmsgpack-rpc1 (= ${binary:Version}),
+  libstdc++6-4.6-dev,
+  zlib1g-dev,
+  libmsgpack-dev,
+  libmpio-dev,
+Description: an inter-process messaging library
+ that uses MessagePack for object serialization
+ .
+ http://msgpack.org/
+
+Package: libmsgpack-rpc1
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+  libstdc++6,
+  zlib1g,
+  libmsgpack3,
+  libmpio0,
+Description: an inter-process messaging library
+ that uses MessagePack for object serialization
+ .
+ http://msgpack.org/
